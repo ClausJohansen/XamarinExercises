@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Buttons"
+             x:Class="Buttons.MainPage">
+
+  <StackLayout Orientation="Vertical">
+    <Frame>
+      <Label x:Name="NumberLabel" HorizontalOptions="CenterAndExpand"/>
+    </Frame>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+      <Button Text="1" Clicked="Button_OnClick" />
+      <Button Text="2" Clicked="Button_OnClick" />
+      <Button Text="3" Clicked="Button_OnClick" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+      <Button Text="4" Clicked="Button_OnClick" />
+      <Button Text="5" Clicked="Button_OnClick" />
+      <Button Text="6" Clicked="Button_OnClick" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+      <Button Text="7" Clicked="Button_OnClick" />
+      <Button Text="8" Clicked="Button_OnClick" />
+      <Button Text="9" Clicked="Button_OnClick" />
+    </StackLayout>
+  </StackLayout>
+  
+  
+</ContentPage>

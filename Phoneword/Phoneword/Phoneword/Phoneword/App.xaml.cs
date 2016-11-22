@@ -11,10 +11,13 @@ namespace Phoneword
 {
     public partial class App : Application
     {
+        public static IList<string> PhoneNumbers { get; set; }
+
         public App()
         {
             InitializeComponent();
-            MainPage = new MainPage();
+            PhoneNumbers = new List<string>();
+            MainPage = new NavigationPage(new MainPage()); // This differs from the assignment.
         }
 
         protected override void OnStart()

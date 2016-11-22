@@ -17,7 +17,7 @@ namespace Phoneword
         {
             InitializeComponent();
             PhoneNumbers = new List<string>();
-            MainPage = new NavigationPage(new MainPage()); // This differs from the assignment.
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

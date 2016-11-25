@@ -14,7 +14,10 @@ namespace XamlSamples
             InitializeComponent();
 
             // MainPage = new XamlSamples.MainPage();
-            MainPage = new SharedResourcesPage();
+            // MainPage = new SharedResourcesPage();
+            // MainPage = new SliderBindingsPage();
+            // MainPage = new SliderTransformsPage();
+            MainPage = new OneShotDateTimePage();
         }
 
         protected override void OnStart()

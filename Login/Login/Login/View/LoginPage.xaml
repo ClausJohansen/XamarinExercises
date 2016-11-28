@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.View.LoginPage">
+
+  <Grid>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="220" /> <!-- Empty grid cell pushes the entire layout up to make room for keyboard on screen -->
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+    <Label x:Name="versionLabel" Text="{Binding VersionText}" Grid.Row="0" HorizontalOptions="Center" />
+  
+    <StackLayout Grid.Row="1" VerticalOptions="End">
+      <Label x:Name="statusLabel" Text="{Binding StatusText}"  HorizontalOptions="Center" />
+      <Entry x:Name="loginEntry" Text="{Binding Path = LoginText, Mode = OneWayToSource}" Keyboard="Numeric" />
+      <Button x:Name="loginButton" Text="Login" IsEnabled="{Binding LoginOk}" />
+    </StackLayout>
+  
+    </Grid>
+  
+</ContentPage>

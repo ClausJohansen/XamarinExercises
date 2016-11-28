@@ -5,15 +5,21 @@ using System.Text;
 
 using Xamarin.Forms;
 
+using Login.View;
+using Login.ViewModel;
+
 namespace Login
 {
     public partial class App : Application
     {
+        
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new Login.MainPage();
+            var viewModel = new LoginViewModel();
+            MainPage = new LoginPage(viewModel);
         }
 
         protected override void OnStart()

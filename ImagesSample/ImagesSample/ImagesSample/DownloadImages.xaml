@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImagesSample.DownloadImages"
+             Title="Download" >
+
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+    <Label Text="ImageSource.FromUri" />
+    <Image Source="https://pbs.twimg.com/profile_images/714593605361541120/JmDEdmDo.jpg" />
+    <Label Text="'JmDEdmDo.jpg' is downloaded from web" />
+  </StackLayout>
+  
+</ContentPage>

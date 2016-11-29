@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ImagesSample"
+             x:Class="ImagesSample.EmbeddedImages"
+             Title="Embedded">
+
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+    <Label Text="ImageSource.FromResource" />
+    <Image Source="{local:ImageResourceExtension FileName=ImagesSample.bandrs.jpg}" />
+    <Label Text="'bandrs.jpg' is a embedded PCL resource referenced in XAML" />
+  </StackLayout>
+  
+</ContentPage>

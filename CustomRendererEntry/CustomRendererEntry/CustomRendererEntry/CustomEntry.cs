@@ -2,7 +2,7 @@
 
 namespace CustomRendererEntry
 {
-    class CustomEntry : Entry
+    public class CustomEntry : Entry
     {
     }
 }

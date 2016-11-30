@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:CustomRendererEntry"
              x:Class="CustomRendererEntry.MainPage">
 
-  <StackLayout>
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
     <Label Text="Hello custom renderer!" />
     <local:CustomEntry Text="In shared code"></local:CustomEntry>
   </StackLayout>

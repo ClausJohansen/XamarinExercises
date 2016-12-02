@@ -1,24 +1,21 @@
-﻿using System;
+﻿using SimpleValueConverter.View;
+using SimpleValueConverter.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
 
-namespace XamlSamples
+namespace SimpleValueConverter
 {
-    public partial class App : Application
+    public class App : Application
     {
         public App()
         {
-            InitializeComponent();
-
-            // MainPage = new XamlSamples.MainPage();
-            // MainPage = new SharedResourcesPage();
-            // MainPage = new SliderBindingsPage();
-            // MainPage = new SliderTransformsPage();
-            // MainPage = new OneShotDateTimePage();
-            MainPage = new ListViewDemoPage();
+            // The root page of your application
+            SlideViewModel model = new SlideViewModel();
+            MainPage = new SlidePage(model);
         }
 
         protected override void OnStart()

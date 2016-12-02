@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SimpleValueConverter"
+             xmlns:converter="clr-namespace:SimpleValueConverter.Converters;assembly=SimpleValueConverter"
+             x:Class="SimpleValueConverter.View.SlidePage">
+  
+  <StackLayout Padding="20">
+
+    <ContentPage.Resources>
+      <ResourceDictionary>
+        <converter:DoubleMultiplierConverter x:Key="doubleMultiplierConverter" />
+      </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Slider x:Name="Slider1" Minimum="0" Maximum="300" Value="{Binding Path=MyValue, Mode=TwoWay, Converter={StaticResource doubleMultiplierConverter}}" />
+    <!-- <Label BindingContext="{x:Reference Name=Slider1}" Text="{Binding Path=Value, StringFormat='Slider1 value: {0}'}" /> -->
+    
+    <Slider x:Name="Slider2" Minimum="0" Maximum="3" Value="{Binding Path=MyValue, Mode=TwoWay}" />
+    <!--<Label BindingContext="{x:Reference Name=Slider2}" Text="{Binding Path=Value, StringFormat='Slider2 value: {0}'}" />-->
+    
+    <!--<Label Text="{Binding Path=MyValue, StringFormat='SliderViewmodel.MyValue is: {0}'}" />-->
+    
+  </StackLayout>
+  
+</ContentPage>

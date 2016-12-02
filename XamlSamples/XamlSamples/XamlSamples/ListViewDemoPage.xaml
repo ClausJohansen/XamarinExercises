@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamlSamples;assembly=XamlSamples"
+             x:Class="XamlSamples.ListViewDemoPage"
+             Title="ListView Demo Page" >
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+        
+      <OnPlatform x:Key="BoxSize"
+                  x:TypeArguments="x:Double"
+                  iOS="50"
+                  Android="50"
+                  WinPhone="75" />
+
+      <OnPlatform x:Key="RowHeight"
+                  x:TypeArguments="x:Int32"
+                  iOS="60"
+                  Android="60"
+                  WinPhone="85" />
+
+      <local:DoubleToIntConverter x:Key="intConverter" />
+      
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ListView ItemsSource="{x:Static local:NamedColor.All}">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ViewCell.View>
+
+            <StackLayout Padding="5, 5, 0, 5" Orientation="Horizontal" Spacing="15">
+              <BoxView WidthRequest="{StaticResource BoxSize}" HeightRequest="{StaticResource BoxSize}" Color="{Binding Color}" />
+              <StackLayout Padding="5, 0, 0, 0" VerticalOptions="Center">
+                <Label Text="{Binding FriendlyName}" FontAttributes="Bold" FontSize="Small" />
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                  <Label Text="{Binding Path=Color.R, Converter={StaticResource intConverter}, ConverterParameter=255, StringFormat='R={0:X2}'}" FontSize="Micro" />
+                  <Label Text="{Binding Path=Color.G, Converter={StaticResource intConverter}, ConverterParameter=255, StringFormat=', G={0:X2}'}" FontSize="Micro"/>
+                  <Label Text="{Binding Path=Color.B, Converter={StaticResource intConverter}, ConverterParameter=255, StringFormat=', B={0:X2}'}" FontSize="Micro"/>
+                </StackLayout>
+              </StackLayout>
+
+            </StackLayout>
+
+
+          </ViewCell.View>
+        </ViewCell>
+      </DataTemplate>      
+    </ListView.ItemTemplate>
+  </ListView>
+
+</ContentPage>
